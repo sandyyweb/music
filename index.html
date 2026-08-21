@@ -493,6 +493,20 @@ progressBar.addEventListener('click', (e) => {
     if (e.ctrlKey && e.key.toLowerCase() === 'u') {
         e.preventDefault();
     }
+
+    // Block F12
+    if (e.key === 'F12') {
+        e.preventDefault();
+    }
+
+    // Block Ctrl + Shift + I / J / C
+    if (
+        e.ctrlKey &&
+        e.shiftKey &&
+        ['i', 'j', 'c'].includes(e.key.toLowerCase())
+    ) {
+        e.preventDefault();
+    }
 });
 </script>
 
