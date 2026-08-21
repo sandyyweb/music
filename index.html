@@ -482,6 +482,11 @@ progressBar.addEventListener('click', (e) => {
     }
   }catch(err){}
 });
+
+  document.addEventListener('contextmenu', function (e) {
+    e.preventDefault();
+    alert('Right-click is disabled on this website.');
+});
 </script>
 
 </body>
